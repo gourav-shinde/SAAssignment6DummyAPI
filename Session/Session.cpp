@@ -46,13 +46,13 @@ void CSession::SaveAt(std::string path) {
 }
 
 ///Creates New workbook and adds into the session
-void CSession::CreateWorkBook() {
+CWorkBookManager CSession::CreateWorkBook() {
 
 }
 
 
 /*! Returns -1 if file not found at specified path, else returns file*/
-void CSession::AddWorkBook(std::string path) {
+CWorkBookManager CSession::AddWorkBook(std::string path) {
 
 }
 

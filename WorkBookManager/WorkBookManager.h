@@ -33,19 +33,31 @@ public:
 	};
 	CWorkBookManager(void);
 	///opens workbook.
-	void OpenWorkBook(std::string path);
+	///@return returns -1 if workbook not found, else return workbook.
+	void OpenWorkBook(std::string path /**< [in] Path of exisiting workbook. */);
 	/// Saves the changes in Workbook.
 	void SaveWorkBook();
-	///Saves the workbook in desired format.
-	void SaveAs(std::string path,FILETYPE type);
+
+/** @brief Saves the workbook in desired format.
+ *
+ *  @remarks csv,xlxs,xlsm,txt are supported types
+ *  @param path Path of exsisiting workbook.
+ *	@param type FILETYPE ENUM object
+ *  @return Should not return
+ */
+	void SaveAs(std::string path ,FILETYPE type);
 	///closes the workbook.
+	///@return Should not return
 	void Close();
 	///Adds a Worksheet to Workbook
-	void addWorkSheet();
+	///@return Should not return
+	CWorkSheetManager addWorkSheet();
 	///Fetches the worksheet from current set of worksheets
-	void MakeWorkSheetActive(std::string name);
+	///@return returns Worksheet object if fould, else null object.
+	CWorkSheetManager MakeWorkSheetActive(std::string name /**< [in] key of worksheet. */);
 	///deletes specified worksheet
-	void deleteWorkSheet(std::string name);
+	///@returns returns Worksheet object if found, else null object.
+	void deleteWorkSheet(std::string name /**< [in] key of workbook. */);
 
 };
 

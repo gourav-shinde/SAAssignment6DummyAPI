@@ -44,13 +44,13 @@ void CWorkBookManager::Close() {
 
 ///Adds a Worksheet to Workbook
 /*! Calls CreateWorkSheet() from CworkSheetManager class.\n creates a new worksheet*/
-void CWorkBookManager::addWorkSheet() {
+CWorkSheetManager CWorkBookManager::addWorkSheet() {
 
 }
 
 ///Fetches the worksheet from current set of worksheets
 /*! Selects the worksheet from map of current workbook*/
-void CWorkBookManager::MakeWorkSheetActive(std::string name) {
+CWorkSheetManager CWorkBookManager::MakeWorkSheetActive(std::string name) {
 
 }
 

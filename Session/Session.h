@@ -42,9 +42,11 @@ public:
 	 ///Saves Session at specified path
 	 void SaveAt(std::string path);
 	 ///Creates New workbook and adds into the session
-	 void CreateWorkBook();
+	 ///@return returns null object if exception occured, else returns workbook object.
+	 CWorkBookManager CreateWorkBook();
 	 ///Adds existing workbook to the session
-	 void AddWorkBook(std::string path);
+	 ///@return returns null object if workbook not found, else returns workbook object.
+	 CWorkBookManager AddWorkBook(std::string path);
 	 ///Removes workbook from the session
 	 void RemoveWorkbook(std::string);
 };
