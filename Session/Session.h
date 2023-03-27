@@ -18,11 +18,22 @@
 
 /// This class manages Session functions and workbooks
 class SESSION_API CSession {
-	std::string current_session_path;
-	std::map<std::string, CWorkBookManager> list;
+	
 public:
+	/// <summary>
+	/// Stores path of current session
+	/// </summary>
+	std::string current_session_path; /*!< Holds the path to current object */
+	/// <summary>
+	/// Stores objects of all workbooks in session
+	/// </summary>
+	std::map<std::string, CWorkBookManager> list; /*!< Holds all the workbooks in the session */
+	/// <summary>
+	/// ID of session object
+	/// </summary>
+	std::int16_t ID;/*!< Holds session ID*/
 	CSession(void);
-	///creates a new session
+	///Creates a new session
 	 void CreateSession();
 	///Loads Session configurations and Workbooks
 	 void LoadSession(std::string path);
@@ -32,12 +43,16 @@ public:
 	 void SaveAt(std::string path);
 	 ///Creates New workbook and adds into the session
 	 void CreateWorkBook();
-	 //Adds exsiting workbook to the session, returns -1 if file does not exist
+	 ///Adds existing workbook to the session
 	 void AddWorkBook(std::string path);
-	 ///removes workbook from the session
+	 ///Removes workbook from the session
 	 void RemoveWorkbook(std::string);
 };
 
 extern SESSION_API int nSession;
 
+/// @remarks
+///     This is an example of an exported function!\n
+///     \n
+///     Returns zero.
 SESSION_API int fnSession(void);

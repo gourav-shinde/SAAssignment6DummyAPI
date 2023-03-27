@@ -13,26 +13,32 @@
 #include<map>
 #include "../WorkSheetManager/WorkSheetManager.h"
 
-/// This class is manages the WorkBook funtions
+/// This class manages the WorkBook functions
 class WORKBOOKMANAGER_API CWorkBookManager {
-	std::string src; /// path of this workbook
-	std::map<std::string, CWorkSheetManager> list;///maintains map of Worksheets in workbook
+	
+
 public:
+	
+	/// Holds path of workbook object
+	std::string src; /*!< Holds path of this workbook */
+	/// Holds and maintains all worksheet objects of current workbook
+	std::map<std::string, CWorkSheetManager> list; /*!< maintains map of Worksheets in workbook */
+	///Defines the types of file supported for saving workbook.
 	enum FILETYPE
 	{
 		csv,
 		xlxs,
 		xlsm,
 		txt
-	};/// defines the types of file supported for saving
+	};
 	CWorkBookManager(void);
-	///This function is used to open workbook.
+	///opens workbook.
 	void OpenWorkBook(std::string path);
-	///This function is used to Save the changes in Workbook.
+	/// Saves the changes in Workbook.
 	void SaveWorkBook();
-	///This function is used to Save the workbook in desired format.
+	///Saves the workbook in desired format.
 	void SaveAs(std::string path,FILETYPE type);
-	///This function is used to close workbook.
+	///closes the workbook.
 	void Close();
 	///Adds a Worksheet to Workbook
 	void addWorkSheet();

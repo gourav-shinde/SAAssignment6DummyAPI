@@ -9,7 +9,10 @@
 /// This is an example of an exported variable
 SESSION_API int nSession=0;
 
-/// This is an example of an exported function.
+/// @remarks
+///     This is an example of an exported function!\n
+///     \n
+///     Returns zero.
 SESSION_API int fnSession(void)
 {
     return 0;
@@ -27,6 +30,7 @@ void CSession::CreateSession() {
 }
 
 ///Load Session configurations and Workbooks
+/*! Returns -1 if session file not found at specified path*/
 void CSession::LoadSession(std::string path) {
 
 }
@@ -46,12 +50,14 @@ void CSession::CreateWorkBook() {
 
 }
 
-///Adds exsiting workbook to the session, returns -1 if file does not exist
+
+/*! Returns -1 if file not found at specified path, else returns file*/
 void CSession::AddWorkBook(std::string path) {
 
 }
 
 ///removes workbook from the session
+/*! This does not delete the workbook.*/
 void CSession::RemoveWorkbook(std::string path) {
 
 }

@@ -22,6 +22,7 @@ CWorkBookManager::CWorkBookManager()
 }
 
 ///This function is used to open workbook
+/*! Returns -1 if existing file not found at specified path, else returns file*/
 void CWorkBookManager::OpenWorkBook(std::string path) {
 
 }
@@ -42,16 +43,19 @@ void CWorkBookManager::Close() {
 }
 
 ///Adds a Worksheet to Workbook
+/*! Calls CreateWorkSheet() from CworkSheetManager class.\n creates a new worksheet*/
 void CWorkBookManager::addWorkSheet() {
 
 }
 
 ///Fetches the worksheet from current set of worksheets
+/*! Selects the worksheet from map of current workbook*/
 void CWorkBookManager::MakeWorkSheetActive(std::string name) {
 
 }
 
 ///deletes specified worksheet
+/*! Permanently deletes the workbook*/
 void CWorkBookManager::deleteWorkSheet(std::string name) {
 
 }

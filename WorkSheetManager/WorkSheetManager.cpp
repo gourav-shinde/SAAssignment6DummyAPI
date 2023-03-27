@@ -22,16 +22,19 @@ CWorkSheetManager::CWorkSheetManager()
 }
 
 ///Loads the worksheet in a current WorkBook
+/*! Loads a exsisting worksheet in active workbook*/
 void CWorkSheetManager::importWorksheet(std::string path)
 {
 }
 
 ///Creates New worksheet
+/*! Creates new worksheet in active workbook.*/
 void CWorkSheetManager::CreateWorkSheet()
 {
 }
 
 ///Saves the WorkSheet
+/*! Saves the worksheet in workbook*/
 void CWorkSheetManager::SaveWorksheet()
 {
 }
